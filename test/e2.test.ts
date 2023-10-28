@@ -1,13 +1,13 @@
 import { describe, expect, it } from "vitest";
-import { getAsteroidNames } from "../exercises/e2";
+import { geTAsteroidNames } from "../exercises/e2";
 import { data } from "../data/data";
 
-describe("getAsteroidNames", () => {
+describe("geTAsteroidNames", () => {
   it("Should exist", () => {
-    expect(getAsteroidNames).toBeInstanceOf(Function);
+    expect(geTAsteroidNames).toBeInstanceOf(Function);
   });
   it("Should give me an array of the asteroids names", () => {
-    expect(getAsteroidNames(data.asteroids)).toEqual([
+    expect(geTAsteroidNames(data.asteroids)).toEqual([
       "1 Ceres",
       "6 Hebe",
       "47171 Lempo",

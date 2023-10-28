@@ -1,19 +1,19 @@
 import { describe, expect, it } from "vitest";
-import { getAsteroidsDiscoveredAfterYear } from "../exercises/e6";
+import { geTAsteroidsDiscoveredAfterYear } from "../exercises/e6";
 import { data } from "../data/data";
 
-describe("getAsteroidsDiscoveredAfterYear", () => {
+describe("geTAsteroidsDiscoveredAfterYear", () => {
   it("should exist", () => {
-    expect(getAsteroidsDiscoveredAfterYear).toBeInstanceOf(Function);
+    expect(geTAsteroidsDiscoveredAfterYear).toBeInstanceOf(Function);
   });
   it("There should be 6 items after 2000", () => {
     expect(
-      getAsteroidsDiscoveredAfterYear(data.asteroids, 2000).length
+      geTAsteroidsDiscoveredAfterYear(data.asteroids, 2000).length
     ).toEqual(6);
   });
   it("Should give an Array of Asteroid Objects", () => {
     expect(
-      getAsteroidsDiscoveredAfterYear(data.asteroids, 2000).map((n) => n.name)
+      geTAsteroidsDiscoveredAfterYear(data.asteroids, 2000).map((n) => n.name)
     ).toEqual([
       "50000 Quaoar",
       "90377 Sedna",

@@ -1,12 +1,12 @@
 import { describe, it, expect } from "vitest";
-import { getFirstPlanetName } from "../exercises/e0-example";
+import { getFirsTPlanetName } from "../exercises/e0-example";
 import { data } from "../data/data";
 
-describe("getPlanetNames", () => {
+describe("geTPlanetNames", () => {
   it("Should exist", () => {
-    expect(getFirstPlanetName).toBeInstanceOf(Function);
+    expect(getFirsTPlanetName).toBeInstanceOf(Function);
   });
   it("Should give me an array of the planet names", () => {
-    expect(getFirstPlanetName(data)).toEqual('Uranus');
+    expect(getFirsTPlanetName(data)).toEqual("Uranus");
   });
 });

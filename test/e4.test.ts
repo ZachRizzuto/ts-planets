@@ -1,16 +1,16 @@
 import { describe, expect, it } from "vitest";
-import { getPlanetNamesWithLowGravity } from "../exercises/e4";
+import { geTPlanetNamesWithLowGravity } from "../exercises/e4";
 import { data } from "../data/data";
 
-describe("getPlanetsWithLowGravity", () => {
+describe("geTPlanetsWithLowGravity", () => {
   it("should exist", () => {
-    expect(getPlanetNamesWithLowGravity).toBeInstanceOf(Function);
+    expect(geTPlanetNamesWithLowGravity).toBeInstanceOf(Function);
   });
   it("There should be 5 planets", () => {
-    expect(getPlanetNamesWithLowGravity(data.planets).length).toEqual(5);
+    expect(geTPlanetNamesWithLowGravity(data.planets).length).toEqual(5);
   });
   it("should give me an array of all the planet names", () => {
-    expect(getPlanetNamesWithLowGravity(data.planets)).toEqual([
+    expect(geTPlanetNamesWithLowGravity(data.planets)).toEqual([
       "Uranus",
       "Mars",
       "Mercure",
