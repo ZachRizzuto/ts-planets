@@ -1,11 +1,8 @@
-export function minBy<T, R>(
-  array: T[],
-  cb: (item: T | undefined) => R | undefined | null
-): T | undefined {
+export function minBy<T, R>(array: T[], cb: (item: T) => R): T | undefined {
   let returnValueMin: T | undefined;
   let min: R | undefined | null = undefined;
 
-  if (array.length > 0) {
+  if (array.length > 0 && array[0]) {
     min = cb(array[0]);
 
     for (let i of array) {
@@ -25,14 +22,11 @@ export function minBy<T, R>(
   return returnValueMin;
 }
 
-export function maxBy<T, R>(
-  array: T[],
-  cb: (item: T | undefined) => R | undefined
-): T | undefined {
+export function maxBy<T, R>(array: T[], cb: (item: T) => R) {
   let returnValueMax: T | undefined;
-  let max: R | undefined = undefined;
+  let max: R;
 
-  if (array.length > 0) {
+  if (array.length > 0 && array[0]) {
     max = cb(array[0]);
 
     for (let i of array) {
